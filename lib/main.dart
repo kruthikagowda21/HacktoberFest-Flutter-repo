@@ -1,6 +1,7 @@
 import 'package:ext_video_player/ext_video_player.dart';
 import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/animated_list_view.dart';
 import 'package:youtube_player_flutter/feature_discovery.dart';
 
 void main() {
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         //home: MyHomePage(title: 'Youtube Video Player'),
-        home: FeatureDiscoveryPage(),
+        //home: FeatureDiscoveryPage(),
+        home: AnimatedListViewPage(),
       ),
     );
   }
