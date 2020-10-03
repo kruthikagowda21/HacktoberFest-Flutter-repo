@@ -1,5 +1,7 @@
 import 'package:ext_video_player/ext_video_player.dart';
+import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/feature_discovery.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,16 +11,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Youtube Video Player',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
+    return FeatureDiscovery(
+      child: MaterialApp(
+        title: 'Youtube Video Player',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
 
-        primarySwatch: Colors.red,
+          primarySwatch: Colors.red,
 
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        //home: MyHomePage(title: 'Youtube Video Player'),
+        home: FeatureDiscoveryPage(),
       ),
-      home: MyHomePage(title: 'Youtube Video Player'),
     );
   }
 }
